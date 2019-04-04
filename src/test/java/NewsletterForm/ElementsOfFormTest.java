@@ -8,6 +8,7 @@ public class ElementsOfFormTest extends BaseTest {
 
     @Test
     public void checkENelemntsFR(){
+        Elements elements = new Elements();
         elements
                 .openFR()
                 .TitleFR()
@@ -18,6 +19,7 @@ public class ElementsOfFormTest extends BaseTest {
 
     @Test
     public void checkENelemntsEN(){
+        Elements elements = new Elements();
         elements
                 .openEN()
                 .TitleEN()

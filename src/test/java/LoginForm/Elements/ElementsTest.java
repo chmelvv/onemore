@@ -9,6 +9,7 @@ public class ElementsTest extends BaseTest {
 
     @Test
     public void ElementsFR(){
+        Elements elements = new Elements();
         elements.openFR()
                 .openPopin()
                 .popinTitleFR()
@@ -19,6 +20,7 @@ public class ElementsTest extends BaseTest {
 
     @Test
     public void ElementsEN(){
+        Elements elements = new Elements();
         elements.openEN()
                 .openPopin()
                 .popinTitleEN()

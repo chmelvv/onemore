@@ -20,6 +20,8 @@ public class SubmitNewsletterFormTest extends BaseTest {
     @Test
 
     public void userSubmitNewsletterFormFR() {
+        Form form = new Form();
+        Homepage homepage = new Homepage();
 
         UserInfo defaultUserInfo = new UserInfo();
 
@@ -36,6 +38,8 @@ public class SubmitNewsletterFormTest extends BaseTest {
     @Test
 
     public void userSubmitNewsletterFormEN() {
+        Form form = new Form();
+        Homepage homepage = new Homepage();
 
         UserInfo defaultUserInfo = new UserInfo();
 

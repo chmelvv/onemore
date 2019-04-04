@@ -12,7 +12,7 @@ public class BaseTest {
 
         Configuration.baseUrl = "http://review-master-uifm4p.ra.skilld.cloud";
         Configuration.startMaximized = true;
-        Configuration.holdBrowserOpen = true;
+//        Configuration.holdBrowserOpen = true;
 
         Selenide.clearBrowserCookies(); //to clear login
     }

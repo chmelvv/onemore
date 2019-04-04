@@ -10,6 +10,7 @@ public class UserLoginTest extends BaseTest {
 
     @Test
     public void userCanLogin(){
+        MainPage mainPage = new MainPage();
         User defaultUser = new User();
 
 
