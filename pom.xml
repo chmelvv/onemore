@@ -99,7 +99,6 @@
                     <dependency>
                         <groupId>org.aspectj</groupId>
                         <artifactId>aspectjweaver</artifactId>
-                        <!--suppress UnresolvedMavenProperty -->
                         <version>${aspectj.version}</version>
                     </dependency>
                 </dependencies>
