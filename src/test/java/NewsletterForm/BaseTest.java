@@ -12,8 +12,8 @@ public class BaseTest {
         System.setProperty("webdriver.chrome.driver", "/home/kondratievas/Загрузки/chromedriver");
         Configuration.headless = true;
         Configuration.baseUrl = "https://www.newsmanagers.com/";
-//        System.setProperty("chromeoptions.args", "--disable-gpu");
-//        System.setProperty("chromeoptions.args", "--no-sandbox");
+        System.setProperty("chromeoptions.args", "--disable-gpu");
+        System.setProperty("chromeoptions.args", "--no-sandbox");
 //        Configuration.startMaximized = true;
 //        Configuration.holdBrowserOpen = true;
 
