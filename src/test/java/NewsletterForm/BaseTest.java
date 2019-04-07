@@ -12,7 +12,7 @@ public class BaseTest {
         System.setProperty("webdriver.chrome.driver", "/home/kondratievas/Загрузки/chromedriver");
         Configuration.headless = true;
         Configuration.baseUrl = "https://www.newsmanagers.com/";
-        Configuration.startMaximized = true;
+//        Configuration.startMaximized = true;
 //        Configuration.holdBrowserOpen = true;
 
         Selenide.clearBrowserCookies(); //to clear login
