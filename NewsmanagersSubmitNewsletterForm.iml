@@ -74,6 +74,11 @@
     <orderEntry type="library" scope="RUNTIME" name="Maven: net.lightbody.bmp:mitm:2.1.5" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.slf4j:slf4j-simple:1.7.21" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.21" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: io.qameta.allure:allure-testng:2.10.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: io.qameta.allure:allure-java-commons:2.10.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: io.qameta.allure:allure-model:2.10.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.apache.tika:tika-core:1.20" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.jooq:joor-java-8:0.9.10" level="project" />
     <orderEntry type="library" name="Maven: commons-io:commons-io:2.6" level="project" />
     <orderEntry type="library" name="Maven: commons-collections:commons-collections:3.2" level="project" />
   </component>

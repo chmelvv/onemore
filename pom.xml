@@ -8,6 +8,12 @@
     <artifactId>AgefiMWF</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <properties>
+        <allure.version>2.10.0</allure.version>
+        <java.version>1.8</java.version>
+        <aspectj.version>1.9.2</aspectj.version>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.testng</groupId>
@@ -39,12 +45,12 @@
             <version>1.7.21</version>
             <scope>test</scope>
         </dependency>
-        <!--<dependency>-->
-            <!--<groupId>io.qameta.allure</groupId>-->
-            <!--<artifactId>allure-testng</artifactId>-->
-            <!--<version>${allure.version}</version>-->
-            <!--<scope>test</scope>-->
-        <!--</dependency>-->
+        <dependency>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-testng</artifactId>
+            <version>${allure.version}</version>
+            <scope>test</scope>
+        </dependency>
         <dependency>
             <groupId>com.codeborne</groupId>
             <artifactId>selenide</artifactId>
@@ -77,28 +83,29 @@
         </dependency>
     </dependencies>
 
-    <!--<build>-->
-        <!--<plugins>-->
-            <!--<plugin>-->
-                <!--<groupId>org.apache.maven.plugins</groupId>-->
-                <!--<artifactId>maven-surefire-plugin</artifactId>-->
-                <!--<version>3.0.0-M3</version>-->
-                <!--<configuration>-->
-                    <!--<testFailureIgnore>true</testFailureIgnore>-->
-                    <!--<argLine>-->
-                        <!-- -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"-->
-                    <!--</argLine>-->
-                <!--</configuration>-->
-                <!--<dependencies>-->
-                    <!--<dependency>-->
-                        <!--<groupId>org.aspectj</groupId>-->
-                        <!--<artifactId>aspectjweaver</artifactId>-->
-                        <!--<version>${aspectj.version}</version>-->
-                    <!--</dependency>-->
-                <!--</dependencies>-->
-            <!--</plugin>-->
-        <!--</plugins>-->
-    <!--</build>-->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.0.0-M3</version>
+                <configuration>
+                    <testFailureIgnore>true</testFailureIgnore>
+                    <!--suppress UnresolvedMavenProperty -->
+                    <argLine>
+                         -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
+                    </argLine>
+                </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.aspectj</groupId>
+                        <artifactId>aspectjweaver</artifactId>
+                        <version>${aspectj.version}</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+        </plugins>
+    </build>
 
     <reporting>
         <excludeDefaults>true</excludeDefaults>
