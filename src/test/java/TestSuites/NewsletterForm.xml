@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="NewsletterForm" parallel="methods" thread-count="20">
+    <test name="Elements">
+        <parameter name="browser" value="Firefox" />
+        <classes>
+            <class name="NewsletterForm.ElementsOfFormTest" />
+        </classes>
+    </test>
+    <test name="Errors">
+        <parameter name="browser" value="Firefox" />
+        <classes>
+            <class name="NewsletterForm.ErrorsTest" />
+        </classes>
+    </test>
+    <test name="Submit">
+        <parameter name="browser" value="Firefox" />
+        <classes>
+            <class name="NewsletterForm.SubmitNewsletterFormTest" />
+        </classes>
+    </test>
+</suite>

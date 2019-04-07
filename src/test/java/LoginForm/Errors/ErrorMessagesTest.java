@@ -57,7 +57,7 @@ public class ErrorMessagesTest extends BaseTest {
         //Password field is empty
             errors.openFR()
                     .openPopin()
-                    .userEmail("test@test.com")
+                    .userEmail("test@test100.com")
                     .clickSubmitButton()
                     .errorRequredPasswordfield2FR()
                     .errorWrongCredentials1FR();
@@ -70,7 +70,7 @@ public class ErrorMessagesTest extends BaseTest {
         //Wrong credentials
             errors.openFR()
                     .openPopin()
-                    .userEmail("test@test.com")
+                    .userEmail("test@test100.com")
                     .userPassword("demo1234")
                     .clickSubmitButton()
                     .errorWrongCredentials2FR();
@@ -122,7 +122,7 @@ public class ErrorMessagesTest extends BaseTest {
         //Password field is empty
         errors.openEN()
                 .openPopin()
-                .userEmail("test@test.com")
+                .userEmail("test@test100.com")
                 .clickSubmitButton()
                 .errorRequredPasswordfield2EN()
                 .errorWrongCredentials1EN();
@@ -135,7 +135,7 @@ public class ErrorMessagesTest extends BaseTest {
         //Wrong credentials
         errors.openEN()
                 .openPopin()
-                .userEmail("test@test.com")
+                .userEmail("test@test100.com")
                 .userPassword("demo1234")
                 .clickSubmitButton()
                 .errorWrongCredentials2EN();

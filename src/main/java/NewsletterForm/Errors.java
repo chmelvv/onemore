@@ -26,7 +26,7 @@ public class Errors {
 
     public Errors openFR() {
         Selenide.open("/inscription-newsletter");
-//        CookieBanerSubmitButton.click();
+        CookieBanerSubmitButton.click();
         return this;
     }
 
@@ -68,7 +68,7 @@ public class Errors {
 
     public Errors openEN() {
         Selenide.open("/en/subscribe-our-newsletter");
-//        CookieBanerSubmitButton.click();
+        CookieBanerSubmitButton.click();
         return this;
     }
 
