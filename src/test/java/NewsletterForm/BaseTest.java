@@ -10,7 +10,7 @@ public class BaseTest {
     @BeforeClass
     public void setup() {
         System.setProperty("webdriver.chrome.driver", "/home/kondratievas/Загрузки/chromedriver");
-//        Configuration.headless = true;
+        Configuration.headless = true;
         Configuration.baseUrl = "https://www.newsmanagers.com/";
 //        System.setProperty("chromeoptions.args", "--disable-gpu");
 //        System.setProperty("chromeoptions.args", "--no-sandbox");
