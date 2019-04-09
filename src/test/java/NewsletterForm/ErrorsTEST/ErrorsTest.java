@@ -13,12 +13,6 @@ public class ErrorsTest extends BaseTest {
     UserInfo userInfo = new UserInfo();
 
 
-    @AfterMethod
-    public void logOff() {
-        Selenide.clearBrowserCookies();
-        Selenide.clearBrowserLocalStorage();
-    }
-
 
     @Test
     public void errorsFR(){
