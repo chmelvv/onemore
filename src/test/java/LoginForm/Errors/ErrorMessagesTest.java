@@ -7,7 +7,8 @@ import org.testng.annotations.Test;
 public class ErrorMessagesTest extends BaseTest {
 
     Errors errors = new Errors();
-    StringsAndUserInfo expectedStrings = new StringsAndUserInfo();
+    Strings expectedStrings = new Strings();
+    UserInfo userInfo = new UserInfo();
 
     @Test
     public void EmptyFieldsTestFR() {
@@ -26,7 +27,7 @@ public class ErrorMessagesTest extends BaseTest {
         //Wrong Username field, password field is empty
             errors.openFR()
                     .openPopin()
-                    .userEmail(expectedStrings.getUserIncorrectEmail())
+                    .userEmail(userInfo.getUserIncorrectEmail())
                     .clickSubmitButton()
                     .errorRequredPasswordfield2FR(expectedStrings.getRequredPasswordFiledFR())
                     .errorIncorrectEmailfieldFR(expectedStrings.getWrongCredentialsFR());
@@ -40,7 +41,7 @@ public class ErrorMessagesTest extends BaseTest {
         //Password field is empty
             errors.openFR()
                     .openPopin()
-                    .userEmail(expectedStrings.getUserCorrectEmail())
+                    .userEmail(userInfo.getUserCorrectEmail())
                     .clickSubmitButton()
                     .errorRequredPasswordfield2FR(expectedStrings.getRequredPasswordFiledFR())
                     .errorWrongCredentials1FR(expectedStrings.getWrongCredentialsFR());
@@ -53,8 +54,8 @@ public class ErrorMessagesTest extends BaseTest {
         //Wrong credentials
             errors.openFR()
                     .openPopin()
-                    .userEmail(expectedStrings.getUserCorrectEmail())
-                    .userPassword(expectedStrings.getUserPassword())
+                    .userEmail(userInfo.getUserCorrectEmail())
+                    .userPassword(userInfo.getUserPassword())
                     .clickSubmitButton()
                     .errorWrongCredentials2FR(expectedStrings.getWrongCredentialsFR());
 
@@ -68,7 +69,7 @@ public class ErrorMessagesTest extends BaseTest {
         //Username is empty
             errors.openFR()
                     .openPopin()
-                    .userPassword(expectedStrings.getUserPassword())
+                    .userPassword(userInfo.getUserPassword())
                     .clickSubmitButton()
                     .errorRequredEmailfield2FR(expectedStrings.getRequredEmailFieldFR());
 
@@ -91,7 +92,7 @@ public class ErrorMessagesTest extends BaseTest {
         //Wrong Username field, password field is empty
         errors.openEN()
                 .openPopin()
-                .userEmail(expectedStrings.getUserIncorrectEmail())
+                .userEmail(userInfo.getUserIncorrectEmail())
                 .clickSubmitButton()
                 .errorRequredPasswordfield2EN(expectedStrings.getRequredPasswordFiledEN())
                 .errorIncorrectEmailfieldEN(expectedStrings.getWrongCredentialsEN());
@@ -105,7 +106,7 @@ public class ErrorMessagesTest extends BaseTest {
         //Password field is empty
         errors.openEN()
                 .openPopin()
-                .userEmail(expectedStrings.getUserCorrectEmail())
+                .userEmail(userInfo.getUserCorrectEmail())
                 .clickSubmitButton()
                 .errorRequredPasswordfield2EN(expectedStrings.getRequredPasswordFiledEN())
                 .errorWrongCredentials1EN(expectedStrings.getWrongCredentialsEN());
@@ -118,8 +119,8 @@ public class ErrorMessagesTest extends BaseTest {
         //Wrong credentials
         errors.openEN()
                 .openPopin()
-                .userEmail(expectedStrings.getUserCorrectEmail())
-                .userPassword(expectedStrings.getUserPassword())
+                .userEmail(userInfo.getUserCorrectEmail())
+                .userPassword(userInfo.getUserPassword())
                 .clickSubmitButton()
                 .errorWrongCredentials2EN(expectedStrings.getWrongCredentialsEN());
 
@@ -133,7 +134,7 @@ public class ErrorMessagesTest extends BaseTest {
         //Username is empty
         errors.openEN()
                 .openPopin()
-                .userPassword(expectedStrings.getUserPassword())
+                .userPassword(userInfo.getUserPassword())
                 .clickSubmitButton()
                 .errorRequredEmailfield2EN(expectedStrings.getRequredEmailFieldEN());
 
