@@ -7,17 +7,17 @@ import lombok.Setter;
 @Setter @Getter
 public class UserInfo {
 
-    private String userCorrectEmail = "test@test100.com";
+    String userCorrectEmail = "test@test100.com";
     private String userIncorrectEmail = "test";
     private String userPassword = "demo1234";
 
-    public String getUserCorrectEmail() {
-        return userCorrectEmail;
-    }
-
-    public void setUserCorrectEmail(String userCorrectEmail) {
-        this.userCorrectEmail = userCorrectEmail;
-    }
+//    public String getUserCorrectEmail() {
+//        return userCorrectEmail;
+//    }
+//
+//    public void setUserCorrectEmail(String userCorrectEmail) {
+//        this.userCorrectEmail = userCorrectEmail;
+//    }
 
     public String getUserIncorrectEmail() {
         return userIncorrectEmail;

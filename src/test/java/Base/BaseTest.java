@@ -11,7 +11,7 @@ public class BaseTest {
     public void setup() {
         System.setProperty("webdriver.chrome.driver", "/home/kondratievas/Загрузки/chromedriver");
         Configuration.headless = true;
-        Configuration.baseUrl = "http://review-master-uifm4p.ra.skilld.cloud/";
+        Configuration.baseUrl = "https://www.newsmanagers.com";
         System.setProperty("chromeoptions.args", "--disable-gpu");
         System.setProperty("chromeoptions.args", "--no-sandbox");
 //        Configuration.startMaximized = true;
