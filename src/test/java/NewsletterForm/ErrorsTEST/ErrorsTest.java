@@ -23,6 +23,8 @@ public class ErrorsTest extends BaseTest {
     @Test
     public void errorsFR(){
         Errors errors = new Errors();
+        Strings strings = new Strings();
+        UserInfo userInfo = new UserInfo();
         errors
                 .openFR()
                 .submitForm()
@@ -36,6 +38,7 @@ public class ErrorsTest extends BaseTest {
     @Test
     public void wrongEmailErrorFR(){
         Errors errors = new Errors();
+        Strings strings = new Strings();
         UserInfo userInfo = new UserInfo();
         errors
                 .openFR()
@@ -50,6 +53,8 @@ public class ErrorsTest extends BaseTest {
     @Test
     public void errorsEN(){
         Errors errors = new Errors();
+        Strings strings = new Strings();
+        UserInfo userInfo = new UserInfo();
         errors
                 .openEN()
                 .submitForm()
@@ -60,6 +65,7 @@ public class ErrorsTest extends BaseTest {
     @Test
     public void wrongEmailErrorEN(){
         Errors errors = new Errors();
+        Strings strings = new Strings();
         UserInfo userInfo = new UserInfo();
         errors
                 .openEN()

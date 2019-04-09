@@ -15,6 +15,7 @@ public class SubmitNewsletterFormTest extends BaseTest {
 
     Form form = new Form();
     Homepage homepage = new Homepage();
+    UserInfo defaultUserInfo = new UserInfo();
 
     @AfterMethod
     public void logOff() {
@@ -30,7 +31,6 @@ public class SubmitNewsletterFormTest extends BaseTest {
     public void userSubmitNewsletterFormFR() {
         Form form = new Form();
         Homepage homepage = new Homepage();
-
         UserInfo defaultUserInfo = new UserInfo();
 
         form.openFR();
@@ -48,7 +48,6 @@ public class SubmitNewsletterFormTest extends BaseTest {
     public void userSubmitNewsletterFormEN() {
         Form form = new Form();
         Homepage homepage = new Homepage();
-
         UserInfo defaultUserInfo = new UserInfo();
 
         form.openEN();

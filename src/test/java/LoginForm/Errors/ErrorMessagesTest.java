@@ -14,6 +14,8 @@ public class ErrorMessagesTest extends BaseTest {
     @Test
     public void EmptyFieldsTestFR() {
         Errors errors = new Errors();
+        Strings expectedStrings = new Strings();
+        UserInfo userInfo = new UserInfo();
     //Both fields are empty
         errors.openFR()
                 .openPopin()
@@ -25,6 +27,8 @@ public class ErrorMessagesTest extends BaseTest {
         @Test
         public void WrongUsernameFieldFR(){
             Errors errors = new Errors();
+            Strings expectedStrings = new Strings();
+            UserInfo userInfo = new UserInfo();
         //Wrong Username field, password field is empty
             errors.openFR()
                     .openPopin()
@@ -39,6 +43,8 @@ public class ErrorMessagesTest extends BaseTest {
         @Test
         public void EmptyPasswordFieldFR() {
             Errors errors = new Errors();
+            Strings expectedStrings = new Strings();
+            UserInfo userInfo = new UserInfo();
         //Password field is empty
             errors.openFR()
                     .openPopin()
@@ -52,6 +58,8 @@ public class ErrorMessagesTest extends BaseTest {
         @Test
         public void WrongCredentialsFR() {
             Errors errors = new Errors();
+            Strings expectedStrings = new Strings();
+            UserInfo userInfo = new UserInfo();
         //Wrong credentials
             errors.openFR()
                     .openPopin()
@@ -67,6 +75,8 @@ public class ErrorMessagesTest extends BaseTest {
         @Test
         public void EmptyUsernameFieldFR() {
             Errors errors = new Errors();
+            Strings expectedStrings = new Strings();
+            UserInfo userInfo = new UserInfo();
         //Username is empty
             errors.openFR()
                     .openPopin()
@@ -76,9 +86,11 @@ public class ErrorMessagesTest extends BaseTest {
 
     }
 
-@Test
-    public void EmptyFieldsTestEN() {
-    Errors errors = new Errors();
+        @Test
+        public void EmptyFieldsTestEN() {
+            Errors errors = new Errors();
+            Strings expectedStrings = new Strings();
+            UserInfo userInfo = new UserInfo();
         //Both fields are empty
         errors.openEN()
                 .openPopin()
@@ -90,6 +102,8 @@ public class ErrorMessagesTest extends BaseTest {
     @Test
     public void WrongUsernameFieldEN(){
         Errors errors = new Errors();
+        Strings expectedStrings = new Strings();
+        UserInfo userInfo = new UserInfo();
         //Wrong Username field, password field is empty
         errors.openEN()
                 .openPopin()
@@ -104,6 +118,8 @@ public class ErrorMessagesTest extends BaseTest {
     @Test
     public void EmptyPasswordFieldEN() {
         Errors errors = new Errors();
+        Strings expectedStrings = new Strings();
+        UserInfo userInfo = new UserInfo();
         //Password field is empty
         errors.openEN()
                 .openPopin()
@@ -117,6 +133,8 @@ public class ErrorMessagesTest extends BaseTest {
     @Test
     public void WrongCredentialsEN() {
         Errors errors = new Errors();
+        Strings expectedStrings = new Strings();
+        UserInfo userInfo = new UserInfo();
         //Wrong credentials
         errors.openEN()
                 .openPopin()
@@ -132,6 +150,8 @@ public class ErrorMessagesTest extends BaseTest {
     @Test
     public void EmptyUsernameFieldEN() {
         Errors errors = new Errors();
+        Strings expectedStrings = new Strings();
+        UserInfo userInfo = new UserInfo();
         //Username is empty
         errors.openEN()
                 .openPopin()

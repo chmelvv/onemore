@@ -13,6 +13,8 @@ public class ErrorsTest extends BaseTest {
     @Test
     public void requredFieldErrorFR(){
         Errors errors = new Errors();
+        Strings strings = new Strings();
+        UserInfo userInfo = new UserInfo();
 
 
         errors
@@ -27,6 +29,8 @@ public class ErrorsTest extends BaseTest {
     @Test
     public void requredFieldErrorEN(){
         Errors errors = new Errors();
+        Strings strings = new Strings();
+        UserInfo userInfo = new UserInfo();
 
         errors
                 .openEN()
@@ -40,6 +44,9 @@ public class ErrorsTest extends BaseTest {
     @Test
     public void invalidEmailErrorFR(){
         Errors errors = new Errors();
+        Strings strings = new Strings();
+        UserInfo userInfo = new UserInfo();
+
         errors
                 .openFR()
                 .openLoginPopinFR()
@@ -50,7 +57,10 @@ public class ErrorsTest extends BaseTest {
 //
     @Test
     public void invalidEmailErrorEN(){
-    Errors errors = new Errors();
+        Errors errors = new Errors();
+        Strings strings = new Strings();
+        UserInfo userInfo = new UserInfo();
+
     errors
             .openEN()
             .openLoginPopinEN()
@@ -62,6 +72,8 @@ public class ErrorsTest extends BaseTest {
     @Test
     public void nonexistentEmailErrorFR(){
         Errors errors = new Errors();
+        Strings strings = new Strings();
+        UserInfo userInfo = new UserInfo();
         errors
                 .openFR()
                 .openLoginPopinFR()
@@ -73,6 +85,8 @@ public class ErrorsTest extends BaseTest {
       @Test
     public void nonexistentEmailErrorEN(){
         Errors errors = new Errors();
+        Strings strings = new Strings();
+        UserInfo userInfo = new UserInfo();
         errors
                 .openEN()
                 .openLoginPopinEN()

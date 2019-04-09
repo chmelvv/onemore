@@ -12,6 +12,7 @@ public class ElementsTest extends BaseTest {
     @Test
     public void ElementsFR(){
         Elements elements = new Elements();
+        Strings expectedStrings = new Strings();
         elements.openFR()
                 .openPopin()
                 .popinTitleFR(expectedStrings.getPopinTitleFR())
@@ -23,6 +24,7 @@ public class ElementsTest extends BaseTest {
     @Test
     public void ElementsEN(){
         Elements elements = new Elements();
+        Strings expectedStrings = new Strings();
         elements.openEN()
                 .openPopin()
                 .popinTitleEN(expectedStrings.getPopinTitleEN())
