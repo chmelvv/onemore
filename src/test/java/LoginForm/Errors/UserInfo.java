@@ -1,5 +1,10 @@
 package LoginForm.Errors;
 
+
+import lombok.Getter;
+import lombok.Setter;
+
+@Setter @Getter
 public class UserInfo {
 
     private String userCorrectEmail = "test@test100.com";

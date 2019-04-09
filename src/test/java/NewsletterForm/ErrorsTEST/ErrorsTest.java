@@ -2,6 +2,8 @@ package NewsletterForm.ErrorsTEST;
 
 import Base.BaseTest;
 import NewsletterForm.Errors;
+import com.codeborne.selenide.Selenide;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 
 public class ErrorsTest extends BaseTest {
@@ -11,6 +13,11 @@ public class ErrorsTest extends BaseTest {
     UserInfo userInfo = new UserInfo();
 
 
+    @AfterMethod
+    public void logOff() {
+        Selenide.clearBrowserCookies();
+        Selenide.clearBrowserLocalStorage();
+    }
 
 
     @Test

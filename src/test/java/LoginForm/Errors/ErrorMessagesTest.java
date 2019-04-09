@@ -3,6 +3,7 @@ package LoginForm.Errors;
 import Base.BaseTest;
 import LoginForm.Elements.Errors;
 import org.testng.annotations.Test;
+import lombok.*;
 
 public class ErrorMessagesTest extends BaseTest {
 
