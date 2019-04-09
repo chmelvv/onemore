@@ -11,6 +11,7 @@ public class ElementsOfFormTest extends BaseTest {
     @Test
     public void checkENelemntsFR(){
         Elements elements = new Elements();
+        Strings strings = new Strings();
         elements
                 .openFR()
                 .TitleFR(strings.getTitleFR())
@@ -24,6 +25,7 @@ public class ElementsOfFormTest extends BaseTest {
     @Test
     public void checkENelemntsEN(){
         Elements elements = new Elements();
+        Strings strings = new Strings();
         elements
                 .openEN()
                 .TitleEN(strings.getTitleEN())

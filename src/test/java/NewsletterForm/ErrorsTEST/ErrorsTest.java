@@ -36,6 +36,7 @@ public class ErrorsTest extends BaseTest {
     @Test
     public void wrongEmailErrorFR(){
         Errors errors = new Errors();
+        UserInfo userInfo = new UserInfo();
         errors
                 .openFR()
                 .invalidEmailField(userInfo.getEmailField())
@@ -59,6 +60,7 @@ public class ErrorsTest extends BaseTest {
     @Test
     public void wrongEmailErrorEN(){
         Errors errors = new Errors();
+        UserInfo userInfo = new UserInfo();
         errors
                 .openEN()
                 .invalidEmailField(userInfo.getEmailField())

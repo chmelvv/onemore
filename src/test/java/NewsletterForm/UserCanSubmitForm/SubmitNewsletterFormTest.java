@@ -3,6 +3,8 @@ package NewsletterForm.UserCanSubmitForm;
 import Base.BaseTest;
 import NewsletterForm.Form;
 import NewsletterForm.Homepage;
+import com.codeborne.selenide.Selenide;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 
 import static com.codeborne.selenide.Selenide.$;
@@ -13,6 +15,13 @@ public class SubmitNewsletterFormTest extends BaseTest {
 
     Form form = new Form();
     Homepage homepage = new Homepage();
+
+    @AfterMethod
+    public void logOff() {
+        Selenide.clearBrowserCookies();
+        Selenide.clearBrowserLocalStorage();
+    }
+
 
 
 
