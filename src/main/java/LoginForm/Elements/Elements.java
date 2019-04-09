@@ -35,26 +35,26 @@ public class Elements {
     }
 
 
-    public Elements popinTitleFR(){
-        popinTitle.shouldHave(Condition.text("Se connecter"));
+    public Elements popinTitleFR(String popinTitleFR){
+        popinTitle.shouldHave(Condition.text(popinTitleFR));
         return this;
     }
 
-    public Elements PlaceholdersFR(){
-        nomPlaceholder.shouldHave(attribute("placeholder","Adresse email"));
-        passwordPlaceholder.shouldHave(attribute("placeholder","Mot de passe"));
-        return this;
-
-    }
-
-    public Elements recoverPasswordLinkFR(){
-        recoverPasswordLinkFR.shouldHave(Condition.text("Mot de passe oublié ?"));
+    public Elements PlaceholdersFR(String nomPlaceholderFR, String passwordPalceholderFR){
+        nomPlaceholder.shouldHave(attribute("placeholder",nomPlaceholderFR));
+        passwordPlaceholder.shouldHave(attribute("placeholder",passwordPalceholderFR));
         return this;
 
     }
 
-    public Elements titleOfSubmitButtonFR(){
-        buttonTitle.shouldHave(Condition.text("Se connecter"));
+    public Elements recoverPasswordLinkFR(String recoverPasswordFR){
+        recoverPasswordLinkFR.shouldHave(Condition.text(recoverPasswordFR));
+        return this;
+
+    }
+
+    public Elements titleOfSubmitButtonFR(String buttonTitleFR){
+        buttonTitle.shouldHave(Condition.text(buttonTitleFR));
         return this;
 
     }
@@ -67,26 +67,26 @@ public class Elements {
 
 
 
-    public Elements popinTitleEN(){
-        popinTitle.shouldHave(Condition.text("Log in"));
+    public Elements popinTitleEN(String popinTitleEN){
+        popinTitle.shouldHave(Condition.text(popinTitleEN));
         return this;
     }
 
-    public Elements PlaceholdersEN(){
-        nomPlaceholder.shouldHave(attribute("placeholder","Mail address"));
-        passwordPlaceholder.shouldHave(attribute("placeholder","Password"));
-        return this;
-
-    }
-
-    public Elements recoverPasswordLinkEN(){
-        recoverPasswordLinkEN.shouldHave(Condition.text("Forgotten password?"));
+    public Elements PlaceholdersEN(String nomPlaceholderEN, String passwordPalceholderEN){
+        nomPlaceholder.shouldHave(attribute("placeholder",nomPlaceholderEN));
+        passwordPlaceholder.shouldHave(attribute("placeholder",passwordPalceholderEN));
         return this;
 
     }
 
-    public Elements titleOfSubmitButtonEN(){
-        buttonTitle.shouldHave(Condition.text("Log in"));
+    public Elements recoverPasswordLinkEN(String recoverPasswordEN){
+        recoverPasswordLinkEN.shouldHave(Condition.text(recoverPasswordEN));
+        return this;
+
+    }
+
+    public Elements titleOfSubmitButtonEN(String buttonTitleEN){
+        buttonTitle.shouldHave(Condition.text(buttonTitleEN));
         return this;
 
     }

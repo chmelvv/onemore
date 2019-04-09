@@ -1,21 +1,23 @@
 package LoginForm.Elements;
 
+import Base.BaseTest;
 import LoginForm.Elements.Elements;
 import org.testng.annotations.Test;
 
 public class ElementsTest extends BaseTest {
 
     Elements elements = new Elements();
+    Strings expectedStrings = new Strings();
 
     @Test
     public void ElementsFR(){
         Elements elements = new Elements();
         elements.openFR()
                 .openPopin()
-                .popinTitleFR()
-                .PlaceholdersFR()
-                .recoverPasswordLinkFR()
-                .titleOfSubmitButtonFR();
+                .popinTitleFR(expectedStrings.getPopinTitleFR())
+                .PlaceholdersFR(expectedStrings.getNomPlaceholderFR(),expectedStrings.getPasswordPlaceholderFR())
+                .recoverPasswordLinkFR(expectedStrings.getRecoverPasswordLinkFR())
+                .titleOfSubmitButtonFR(expectedStrings.getButtonTitleFR());
     }
 
     @Test
@@ -23,10 +25,10 @@ public class ElementsTest extends BaseTest {
         Elements elements = new Elements();
         elements.openEN()
                 .openPopin()
-                .popinTitleEN()
-                .PlaceholdersEN()
-                .recoverPasswordLinkEN()
-                .titleOfSubmitButtonEN();
+                .popinTitleEN(expectedStrings.getPopinTitleEN())
+                .PlaceholdersEN(expectedStrings.getNomPlaceholderEN(),expectedStrings.getPasswordPlaceholderEN())
+                .recoverPasswordLinkEN(expectedStrings.getRecoverPasswordLinkEN())
+                .titleOfSubmitButtonEN(expectedStrings.getButtonTitleEN());
     }
 
 }

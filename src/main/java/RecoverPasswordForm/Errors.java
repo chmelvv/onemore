@@ -31,8 +31,8 @@ public class Errors {
         return this;
     }
 
-    public Errors checkPopinOpenedFR(){
-        popinTitle.shouldHave(Condition.text("Réinitialiser votre mot de passe"));
+    public Errors checkPopinOpenedFR(String PopinTitleFR){
+        popinTitle.shouldHave(Condition.text(PopinTitleFR));
         return this;
     }
 
@@ -41,25 +41,25 @@ public class Errors {
         return this;
     }
 
-    public Errors requredFieldErrorFR(){
+    public Errors requredFieldErrorFR(String requredFieldErrorFR){
         buttonTitle.click();
-        emptyFieldError.shouldHave(Condition.text("Le champ Nom d'utilisateur ou adresse courriel est requis."));
+        emptyFieldError.shouldHave(Condition.text(requredFieldErrorFR));
         return this;
 
     }
 
-    public Errors invalidFieldErrorFR(){
-        emailField.setValue("test");
+    public Errors invalidFieldErrorFR(String invalidEmail, String invalidFieldErrorFR){
+        emailField.setValue(invalidEmail);
         buttonTitle.click();
-        emptyFieldError.shouldHave(Condition.text("test n'est pas reconnu comme nom d'utilisateur ou adresse de courriel."));
+        emptyFieldError.shouldHave(Condition.text(invalidFieldErrorFR));
         return this;
 
     }
 
-    public Errors nonexistentEmailFR(){
-        emailField.setValue("nonexistent@email.com");
+    public Errors nonexistentEmailFR(String nonexistentEmail, String nonexistentEmailFR){
+        emailField.setValue(nonexistentEmail);
         buttonTitle.click();
-        emptyFieldError.shouldHave(Condition.text("nonexistent@email.com n'est pas reconnu comme nom d'utilisateur ou adresse de courriel."));
+        emptyFieldError.shouldHave(Condition.text(nonexistentEmailFR));
         return this;
 
     }
@@ -80,8 +80,8 @@ public class Errors {
         return this;
     }
 
-    public Errors checkPopinOpenedEN(){
-        popinTitle.shouldHave(Condition.text("Reset your password"));
+    public Errors checkPopinOpenedEN(String popinTitleEN){
+        popinTitle.shouldHave(Condition.text(popinTitleEN));
         return this;
     }
 
@@ -91,23 +91,23 @@ public class Errors {
     }
 
 
-    public Errors requredFieldErrorEN(){
-        emptyFieldError.shouldHave(Condition.text("Username or email address field is required."));
+    public Errors requredFieldErrorEN(String requredFieldErrorEN){
+        emptyFieldError.shouldHave(Condition.text(requredFieldErrorEN));
         return this;
 
     }
-    public Errors invalidFieldErrorEN(){
-        emailField.setValue("test");
+    public Errors invalidFieldErrorEN(String invalidEmail, String invalidFieldErrorEN){
+        emailField.setValue(invalidEmail);
         buttonTitle.click();
-        emptyFieldError.shouldHave(Condition.text("test is not recognized as a username or an email address."));
+        emptyFieldError.shouldHave(Condition.text(invalidFieldErrorEN));
         return this;
 
     }
 
-    public Errors nonexistentEmailEN(){
-        emailField.setValue("nonexistent@email.com");
+    public Errors nonexistentEmailEN(String nonexistentEmail, String nonexistentEmailEN){
+        emailField.setValue(nonexistentEmail);
         buttonTitle.click();
-        emptyFieldError.shouldHave(Condition.text("nonexistent@email.com is not recognized as a username or an email address."));
+        emptyFieldError.shouldHave(Condition.text(nonexistentEmailEN));
         return this;
 
     }

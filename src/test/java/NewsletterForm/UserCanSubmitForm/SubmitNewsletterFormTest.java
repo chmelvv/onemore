@@ -1,9 +1,8 @@
-package NewsletterForm;
+package NewsletterForm.UserCanSubmitForm;
 
-import NewsletterForm.BaseTest;
+import Base.BaseTest;
 import NewsletterForm.Form;
 import NewsletterForm.Homepage;
-import NewsletterForm.UserInfo;
 import org.testng.annotations.Test;
 
 import static com.codeborne.selenide.Selenide.$;

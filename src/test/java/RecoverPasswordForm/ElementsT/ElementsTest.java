@@ -1,10 +1,13 @@
-package RecoverPasswordForm;
+package RecoverPasswordForm.ElementsT;
 
 
+import Base.BaseTest;
+import RecoverPasswordForm.Elements;
 import org.testng.annotations.Test;
 
 public class ElementsTest extends BaseTest {
      Elements elements = new Elements();
+     Strings strings = new Strings();
 
      @Test
      public void ElementsFR(){
@@ -13,7 +16,7 @@ public class ElementsTest extends BaseTest {
          elements
                  .openFR()
                  .getPopinFR()
-                 .checkElementsFR();
+                 .checkElementsFR(strings.getPopinTitleFR(),strings.getEmailFieldlaceholderFR(),strings.getDescriptionFR(),strings.getButtonTitleFR());
 
      }
 
@@ -24,7 +27,7 @@ public class ElementsTest extends BaseTest {
         elements
                 .openEN()
                 .getPopinEN()
-                .checkElementsEN();
+                .checkElementsEN(strings.getPopinTitleEN(),strings.getEmailFieldlaceholderEN(),strings.getDescriptionEN(),strings.getButtonTitleEN());
 
     }
 

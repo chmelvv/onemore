@@ -1,4 +1,4 @@
-package NewsletterForm;
+package Base;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
@@ -15,7 +15,7 @@ public class BaseTest {
         System.setProperty("chromeoptions.args", "--disable-gpu");
         System.setProperty("chromeoptions.args", "--no-sandbox");
 //        Configuration.startMaximized = true;
-//        Configuration.holdBrowserOpen = true;
+////        Configuration.holdBrowserOpen = true;
 
         Selenide.clearBrowserCookies(); //to clear login
 

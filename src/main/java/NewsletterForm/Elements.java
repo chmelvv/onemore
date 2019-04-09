@@ -31,35 +31,35 @@ public class Elements {
         return this;
     }
 
-    public Elements TitleFR(){
-        Title.shouldHave(Condition.text("Inscription newsletter"));
+    public Elements TitleFR(String TitleFR){
+        Title.shouldHave(Condition.text(TitleFR));
         return this;
     }
 
-    public Elements DescriptionFR(){
-        Description.shouldHave(Condition.text("Chaque jeudi, le meilleur de l'info de Newsmanagers !"));
+    public Elements DescriptionFR(String DescriptionFR){
+        Description.shouldHave(Condition.text(DescriptionFR));
         return this;
     }
 
-    public Elements TitlesOfFieldsFR(){
-        NomlField.shouldHave(Condition.text("Nom"));
-        PrenomField.shouldHave(Condition.text("Prénom"));
-        EmailField.shouldHave(Condition.text("Email"));
-        SecteurField.shouldHave(Condition.text("Secteur"));
-        SociétéField.shouldHave(Condition.text("Société"));
-        TelField.shouldHave(Condition.text("Téléphone"));
-        AdresseField.shouldHave(Condition.text("Adresse"));
-        VilleField.shouldHave(Condition.text("Ville"));
-        CodePostalField.shouldHave(Condition.text("Code postal"));
-        PaysField.shouldHave(Condition.text("Pays"));
-        Checkbox.shouldHave(Condition.text("En complétant ce formulaire, vous validez les Conditions Générales d’Utilisation et acceptez que L'Agefi SA, responsable de traitement, traite vos données personnelles à des fins de création et gestion de votre compte utilisateur. Pour en savoir plus sur vos droits et nos pratiques en matière de protection de vos données personnelles, suivez ce lien : Politique de confidentialité.  Vous êtes susceptible de recevoir des actualités et offres par L'Agefi SA. Si vous ne le souhaitez pas, cochez la case "));
+    public Elements TitlesOfFieldsFR(String NomFieldFR, String PrenomFieldFR, String EmailFieldFR, String SecteurFieldFR, String SociétéFieldFR, String TelFieldFR, String AdresseFieldFR, String VilleFieldFR, String CodePostalFieldFR, String PaysFieldFR, String CheckboxFR){
+        NomlField.shouldHave(Condition.text(NomFieldFR));
+        PrenomField.shouldHave(Condition.text(PrenomFieldFR));
+        EmailField.shouldHave(Condition.text(EmailFieldFR));
+        SecteurField.shouldHave(Condition.text(SecteurFieldFR));
+        SociétéField.shouldHave(Condition.text(SociétéFieldFR));
+        TelField.shouldHave(Condition.text(TelFieldFR));
+        AdresseField.shouldHave(Condition.text(AdresseFieldFR));
+        VilleField.shouldHave(Condition.text(VilleFieldFR));
+        CodePostalField.shouldHave(Condition.text(CodePostalFieldFR));
+        PaysField.shouldHave(Condition.text(PaysFieldFR));
+        Checkbox.shouldHave(Condition.text(CheckboxFR));
 
 
         return this;
     }
 
-    public Elements TitleOFbuttonFR(){
-        SubmitButon.shouldHave(attribute("value","Soumettre"));
+    public Elements TitleOFbuttonFR(String SubmitButtonFR){
+        SubmitButon.shouldHave(attribute("value",SubmitButtonFR));
         return this;
     }
 
@@ -68,36 +68,36 @@ public class Elements {
         return this;
     }
 
-    public Elements TitleEN(){
-        Title.shouldHave(Condition.text("Subscribe to our newsletter"));
+    public Elements TitleEN(String TitleEN){
+        Title.shouldHave(Condition.text(TitleEN));
         return this;
     }
 
-    public Elements DescriptionEN() {
-        Description.shouldHave(Condition.text("Get the best of Newsmanagers, every Thursday!"));
+    public Elements DescriptionEN(String DescriptionEN) {
+        Description.shouldHave(Condition.text(DescriptionEN));
         return this;
     }
 
 
 
-    public Elements TitlesOfFieldsEN(){
-        NomlField.shouldHave(Condition.text("Last name"));
-        PrenomField.shouldHave(Condition.text("First name"));
-        EmailField.shouldHave(Condition.text("Email"));
-        SecteurField.shouldHave(Condition.text("Sector"));
-        SociétéField.shouldHave(Condition.text("Company"));
-        TelField.shouldHave(Condition.text("Phone"));
-        AdresseField.shouldHave(Condition.text("Address"));
-        VilleField.shouldHave(Condition.text("City/Town"));
-        CodePostalField.shouldHave(Condition.text("ZIP/Postal Code"));
-        PaysField.shouldHave(Condition.text("Country"));
-        Checkbox.shouldHave(Condition.text("By completing this form, you accept the General Terms of Use and agree that AGEFI SA, the body responsible for data processing, will process your data for the purposes of creation and management of your user account. For further information about your rights and our practices to protect your personal data, follow this link: Confidentiality policy. You may receive updates and offers from AGEFI SA. If you do not wish to receive updates and offers, tick the box"));
+    public Elements TitlesOfFieldsEN(String NomFieldEN, String PrenomFieldEN, String EmailFieldEN, String SecteurFieldEN, String SociétéFieldEN, String TelFieldEN, String AdresseFieldEN, String VilleFieldEN, String CodePostalFieldEN, String PaysFieldEN, String CheckboxEN){
+        NomlField.shouldHave(Condition.text(NomFieldEN));
+        PrenomField.shouldHave(Condition.text(PrenomFieldEN));
+        EmailField.shouldHave(Condition.text(EmailFieldEN));
+        SecteurField.shouldHave(Condition.text(SecteurFieldEN));
+        SociétéField.shouldHave(Condition.text(SociétéFieldEN));
+        TelField.shouldHave(Condition.text(TelFieldEN));
+        AdresseField.shouldHave(Condition.text(AdresseFieldEN));
+        VilleField.shouldHave(Condition.text(VilleFieldEN));
+        CodePostalField.shouldHave(Condition.text(CodePostalFieldEN));
+        PaysField.shouldHave(Condition.text(PaysFieldEN));
+        Checkbox.shouldHave(Condition.text(CheckboxEN));
 
         return this;
     }
 
-    public Elements TitleOFbuttonEN(){
-        SubmitButon.shouldHave(attribute("value","Submit"));
+    public Elements TitleOFbuttonEN(String SubmitButtonEN){
+        SubmitButon.shouldHave(attribute("value", SubmitButtonEN));
         return this;
     }
 

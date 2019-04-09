@@ -1,0 +1,65 @@
+package NewsletterForm.ErrorsTEST;
+
+import Base.BaseTest;
+import NewsletterForm.Errors;
+import org.testng.annotations.Test;
+
+public class ErrorsTest extends BaseTest {
+
+    Errors errors = new Errors();
+    Strings strings = new Strings();
+    UserInfo userInfo = new UserInfo();
+
+
+
+
+    @Test
+    public void errorsFR(){
+        Errors errors = new Errors();
+        errors
+                .openFR()
+                .submitForm()
+                .requredFieldsFR(strings.getRequredNomFieldFR(),strings.getRequredPrenomFieldFR(),strings.getRequredEmailFieldFR(),strings.getRequredSecteurFieldFR(),strings.getRequredSociétéFieldFR(),
+                        strings.getRequredTelFieldFR(),strings.getRequredRulesFieldFR());
+
+    }
+
+
+
+    @Test
+    public void wrongEmailErrorFR(){
+        Errors errors = new Errors();
+        errors
+                .openFR()
+                .invalidEmailField(userInfo.getEmailField())
+                .submitForm()
+                .invalidEmailErrorFR(strings.getInvalidEmailErrorFR());
+
+
+    }
+
+
+    @Test
+    public void errorsEN(){
+        Errors errors = new Errors();
+        errors
+                .openEN()
+                .submitForm()
+                .requredFieldsEN(strings.getRequredNomFieldEN(),strings.getRequredPrenomFieldEN(),strings.getRequredEmailFieldEN(),strings.getRequredSecteurFieldEN(),strings.getRequredSociétéFieldEN(),
+                        strings.getRequredTelFieldEN(),strings.getRequredRulesFieldEN());
+    }
+
+    @Test
+    public void wrongEmailErrorEN(){
+        Errors errors = new Errors();
+        errors
+                .openEN()
+                .invalidEmailField(userInfo.getEmailField())
+                .submitForm()
+                .invalidEmailErrorEN(strings.getInvalidEmailErrorEN());
+
+
+    }
+
+
+}

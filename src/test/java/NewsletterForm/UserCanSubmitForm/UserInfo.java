@@ -1,4 +1,4 @@
-package NewsletterForm;
+package NewsletterForm.UserCanSubmitForm;
 
 public class UserInfo {
 

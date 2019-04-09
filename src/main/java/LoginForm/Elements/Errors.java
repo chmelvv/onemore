@@ -47,84 +47,84 @@ public class Errors {
         return this;
     }
 
-    public Errors errorRequredEmailfield1FR(){
-        requredEmailField.shouldHave(text("Le champ Adresse email est requis."));
+    public Errors errorRequredEmailfield1FR(String requredEmailFieldFR){
+        requredEmailField.shouldHave(text(requredEmailFieldFR));
         return this;
 
     }
 
-    public Errors errorRequredEmailfield1EN(){
-        requredEmailField.shouldHave(text("Mail address field is required."));
+    public Errors errorRequredEmailfield1EN(String requredEmailFieldEN){
+        requredEmailField.shouldHave(text(requredEmailFieldEN));
         return this;
 
     }
 
-    public Errors errorRequredPasswordfield1FR(){
-        requredPasswordFiled.shouldHave(text("Le champ Mot de passe est requis."));
+    public Errors errorRequredPasswordfield1FR(String requredPasswordFiledFR){
+        requredPasswordFiled.shouldHave(text(requredPasswordFiledFR));
         return this;
 
     }
 
-    public Errors errorRequredPasswordfield1EN(){
-        requredPasswordFiled.shouldHave(text("Password field is required."));
-        return this;
-
-    }
-
-
-    public Errors errorIncorrectEmailfieldFR(){
-        requredPasswordFiled.shouldHave(text("Nom d'utilisateur ou mot de passe non reconnu."));
-        return this;
-    }
-
-    public Errors errorIncorrectEmailfieldEN(){
-        requredPasswordFiled.shouldHave(text("Unrecognized username or password. Forgot your password?"));
-        return this;
-    }
-
-    public Errors errorRequredPasswordfield2FR(){
-        requredEmailField.shouldHave(text("Le champ Mot de passe est requis."));
+    public Errors errorRequredPasswordfield1EN(String requredPasswordFiledEN){
+        requredPasswordFiled.shouldHave(text(requredPasswordFiledEN));
         return this;
 
     }
 
 
-    public Errors errorRequredPasswordfield2EN(){
-        requredEmailField.shouldHave(text("Password field is required."));
+    public Errors errorIncorrectEmailfieldFR(String wrongCredentialsFR){
+        requredPasswordFiled.shouldHave(text(wrongCredentialsFR));
+        return this;
+    }
+
+    public Errors errorIncorrectEmailfieldEN(String wrongCredentialsEN){
+        requredPasswordFiled.shouldHave(text(wrongCredentialsEN));
+        return this;
+    }
+
+    public Errors errorRequredPasswordfield2FR(String requredPasswordFiledFR){
+        requredEmailField.shouldHave(text(requredPasswordFiledFR));
         return this;
 
     }
 
-    public Errors errorWrongCredentials1FR() {
-        requredPasswordFiled.shouldHave(text("Nom d'utilisateur ou mot de passe non reconnu."));
-        return this;
-    }
 
-    public Errors errorWrongCredentials1EN() {
-        requredPasswordFiled.shouldHave(text("Unrecognized username or password. Forgot your password?"));
-        return this;
-    }
-
-    public Errors errorWrongCredentials2FR(){
-        wrongCredentials.shouldHave(text("Nom d'utilisateur ou mot de passe non reconnu."));
+    public Errors errorRequredPasswordfield2EN(String requredPasswordFiledEN){
+        requredEmailField.shouldHave(text(requredPasswordFiledEN));
         return this;
 
     }
 
-    public Errors errorWrongCredentials2EN(){
-        wrongCredentials.shouldHave(text("Unrecognized username or password. Forgot your password?"));
+    public Errors errorWrongCredentials1FR(String wrongCredentialsFR) {
+        requredPasswordFiled.shouldHave(text(wrongCredentialsFR));
+        return this;
+    }
+
+    public Errors errorWrongCredentials1EN(String wrongCredentialsEN) {
+        requredPasswordFiled.shouldHave(text(wrongCredentialsEN));
+        return this;
+    }
+
+    public Errors errorWrongCredentials2FR(String wrongCredentialsFR){
+        wrongCredentials.shouldHave(text(wrongCredentialsFR));
         return this;
 
     }
 
-    public Errors errorRequredEmailfield2FR(){
-        wrongCredentials.shouldHave(text("Le champ Adresse email est requis."));
+    public Errors errorWrongCredentials2EN(String wrongCredentialsEN){
+        wrongCredentials.shouldHave(text(wrongCredentialsEN));
         return this;
 
     }
 
-    public Errors errorRequredEmailfield2EN(){
-        wrongCredentials.shouldHave(text("Mail address field is required."));
+    public Errors errorRequredEmailfield2FR(String requredEmailFieldFR){
+        wrongCredentials.shouldHave(text(requredEmailFieldFR));
+        return this;
+
+    }
+
+    public Errors errorRequredEmailfield2EN(String requredEmailFieldEN){
+        wrongCredentials.shouldHave(text(requredEmailFieldEN));
         return this;
 
     }

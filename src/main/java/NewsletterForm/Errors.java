@@ -36,28 +36,28 @@ public class Errors {
     }
 
 
-    public Errors requredFieldsFR() {
-        requredNomField.shouldHave(Condition.text("Le champ Nom est requis."));
-        requredPrenomField.shouldHave(Condition.text("Le champ Prénom est requis."));
-        requredEmailField.shouldHave(Condition.text("Le champ Email est requis."));
-        requredSecteurField.shouldHave(Condition.text("Le champ Secteur est requis."));
-        requredSociétéField.shouldHave(Condition.text("Le champ Société est requis."));
-        requredTelField.shouldHave(Condition.text("Le champ Téléphone est requis."));
-        requredRulesField.shouldHave(Condition.text("Le champ En complétant ce formulaire, vous validez les Conditions Générales d’Utilisation et acceptez que L'Agefi SA, responsable de traitement, traite vos données personnelles à des fins de création et gestion de votre compte utilisateur. Pour en savoir plus sur vos droits et nos pratiques en matière de protection de vos données personnelles, suivez ce lien : Politique de confidentialité.  Vous êtes susceptible de recevoir des actualités et offres par L'Agefi SA. Si vous ne le souhaitez pas, cochez la case  est requis."));
+    public Errors requredFieldsFR(String requredNomFieldFR, String requredPrenomFieldFR, String requredEmailFieldFR, String requredSecteurFieldFR, String requredSociétéFieldFR, String requredTelFieldFR, String requredRulesFieldFR) {
+        requredNomField.shouldHave(Condition.text(requredNomFieldFR));
+        requredPrenomField.shouldHave(Condition.text(requredPrenomFieldFR));
+        requredEmailField.shouldHave(Condition.text(requredEmailFieldFR));
+        requredSecteurField.shouldHave(Condition.text(requredSecteurFieldFR));
+        requredSociétéField.shouldHave(Condition.text(requredSociétéFieldFR));
+        requredTelField.shouldHave(Condition.text(requredTelFieldFR));
+        requredRulesField.shouldHave(Condition.text(requredRulesFieldFR));
 
         return this;
     }
 
 
-    public Errors invalidEmailField() {
-        EmailField.setValue("test");
+    public Errors invalidEmailField(String invalidEmailField) {
+        EmailField.setValue(invalidEmailField);
         return this;
     }
 
 
 
-    public Errors invalidEmailErrorFR(){
-        requredEmailField.shouldHave(Condition.text("L'adresse de courriel test n'est pas valide."));
+    public Errors invalidEmailErrorFR(String invalidEmailErrorFR){
+        requredEmailField.shouldHave(Condition.text(invalidEmailErrorFR));
 
         return this;
 
@@ -74,21 +74,20 @@ public class Errors {
 
 
 
-    public Errors requredFieldsEN() {
-        requredNomField.shouldHave(Condition.text("Last name field is required."));
-        requredPrenomField.shouldHave(Condition.text("First name field is required."));
-        requredEmailField.shouldHave(Condition.text("Email field is required."));
-        requredSecteurField.shouldHave(Condition.text("Sector field is required."));
-        requredSociétéField.shouldHave(Condition.text("Company field is required."));
-        requredTelField.shouldHave(Condition.text("Phone field is required."));
-        requredRulesField.shouldHave(Condition.text("By completing this form, you accept the General Terms of Use and agree that AGEFI SA, the body responsible for data processing, will process your data for the purposes of creation and management of your user account. For further information about your rights and our practices to protect your personal data, follow this link: Confidentiality policy. You may receive updates and offers from AGEFI SA. If you do not wish to receive updates and offers, tick the box field is required."));
-
+    public Errors requredFieldsEN(String requredNomFieldEN, String requredPrenomFieldEN, String requredEmailFieldEN, String requredSecteurFieldEN, String requredSociétéFieldEN, String requredTelFieldEN, String requredRulesFieldEN) {
+        requredNomField.shouldHave(Condition.text(requredNomFieldEN));
+        requredPrenomField.shouldHave(Condition.text(requredPrenomFieldEN));
+        requredEmailField.shouldHave(Condition.text(requredEmailFieldEN));
+        requredSecteurField.shouldHave(Condition.text(requredSecteurFieldEN));
+        requredSociétéField.shouldHave(Condition.text(requredSociétéFieldEN));
+        requredTelField.shouldHave(Condition.text(requredTelFieldEN));
+        requredRulesField.shouldHave(Condition.text(requredRulesFieldEN));
         return this;
     }
 
 
-    public Errors invalidEmailErrorEN(){
-        requredEmailField.shouldHave(Condition.text("The email address test is not valid."));
+    public Errors invalidEmailErrorEN(String invalidEmailErrorEN){
+        requredEmailField.shouldHave(Condition.text(invalidEmailErrorEN));
 
         return this;
 

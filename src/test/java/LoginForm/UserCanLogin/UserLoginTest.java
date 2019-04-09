@@ -1,7 +1,6 @@
 package LoginForm.UserCanLogin;
 
-import LoginForm.Elements.BaseTest;
-import LoginForm.UserCanLogin.User;
+import Base.BaseTest;
 import org.testng.annotations.Test;
 
 public class UserLoginTest extends BaseTest {

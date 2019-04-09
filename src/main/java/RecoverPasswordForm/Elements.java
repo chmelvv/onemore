@@ -30,11 +30,11 @@ public class Elements {
         return this;
     }
 
-    public Elements checkElementsFR(){
-        popinTitle.shouldHave(Condition.text("Réinitialiser votre mot de passe"));
-        emailFieldlaceholder.shouldHave(attribute("placeholder","Nom d'utilisateur ou adresse courriel"));
-        description.shouldHave(Condition.text("Les instructions de réinitialisation du mot de passe seront envoyées à votre adresse e-mail enregistrée."));
-        buttonTitle.shouldHave(Condition.text("Soumettre"));
+    public Elements checkElementsFR(String popinTitleFR, String emailFieldPlaceholderFR, String DescriptionFR, String buttonTitleFR){
+        popinTitle.shouldHave(Condition.text(popinTitleFR));
+        emailFieldlaceholder.shouldHave(attribute("placeholder",emailFieldPlaceholderFR));
+        description.shouldHave(Condition.text(DescriptionFR));
+        buttonTitle.shouldHave(Condition.text(buttonTitleFR));
         return this;
     }
 
@@ -49,11 +49,11 @@ public class Elements {
         return this;
     }
 
-    public Elements checkElementsEN(){
-        popinTitle.shouldHave(Condition.text("Reset your password"));
-        emailFieldlaceholder.shouldHave(attribute("placeholder","Username or email address"));
-        description.shouldHave(Condition.text("Password reset instructions will be sent to your registered email address."));
-        buttonTitle.shouldHave(Condition.text("Submit"));
+    public Elements checkElementsEN(String popinTitleEN, String emailFieldPlaceholderEN, String DescriptionEN, String buttonTitleEN){
+        popinTitle.shouldHave(Condition.text(popinTitleEN));
+        emailFieldlaceholder.shouldHave(attribute("placeholder",emailFieldPlaceholderEN));
+        description.shouldHave(Condition.text(DescriptionEN));
+        buttonTitle.shouldHave(Condition.text(buttonTitleEN));
         return this;
     }
 

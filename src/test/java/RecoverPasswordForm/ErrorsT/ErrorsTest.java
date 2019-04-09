@@ -1,25 +1,27 @@
-package RecoverPasswordForm;
+package RecoverPasswordForm.ErrorsT;
 
-import com.codeborne.selenide.Configuration;
-import org.testng.annotations.AfterMethod;
+import Base.BaseTest;
+import RecoverPasswordForm.Errors;
 import org.testng.annotations.Test;
-import com.codeborne.selenide.Selenide;
 
 public class ErrorsTest extends BaseTest {
 
     Errors errors = new Errors();
+    Strings strings = new Strings();
+    UserInfo userInfo = new UserInfo();
 
     @Test
     public void requredFieldErrorFR(){
         Errors errors = new Errors();
 
+
         errors
                 .openFR()
                 .openLoginPopinFR()
                 .getPopinFR()
-                .checkPopinOpenedFR()
+                .checkPopinOpenedFR(strings.getPopinTitleFR())
                 .clickButton()
-                .requredFieldErrorFR();
+                .requredFieldErrorFR(strings.getRequredFieldErrorFR());
     }
 
     @Test
@@ -30,9 +32,9 @@ public class ErrorsTest extends BaseTest {
                 .openEN()
                 .openLoginPopinEN()
                 .getPopinEN()
-                .checkPopinOpenedEN()
+                .checkPopinOpenedEN(strings.getPopinTitleEN())
                 .clickButton()
-                .requredFieldErrorEN();
+                .requredFieldErrorEN(strings.getRequredFieldErrorEN());
     }
 
     @Test
@@ -42,8 +44,8 @@ public class ErrorsTest extends BaseTest {
                 .openFR()
                 .openLoginPopinFR()
                 .getPopinFR()
-                .checkPopinOpenedFR()
-                .invalidFieldErrorFR();
+                .checkPopinOpenedFR(strings.getPopinTitleFR())
+                .invalidFieldErrorFR(userInfo.getInvalidFieldError(),strings.getInvalidFieldErrorFR());
     }
 //
     @Test
@@ -53,8 +55,8 @@ public class ErrorsTest extends BaseTest {
             .openEN()
             .openLoginPopinEN()
             .getPopinEN()
-            .checkPopinOpenedEN()
-            .invalidFieldErrorEN();
+            .checkPopinOpenedEN(strings.getPopinTitleEN())
+            .invalidFieldErrorEN(userInfo.getInvalidFieldError(),strings.getInvalidFieldErrorEN());
 }
 
     @Test
@@ -64,8 +66,8 @@ public class ErrorsTest extends BaseTest {
                 .openFR()
                 .openLoginPopinFR()
                 .getPopinFR()
-                .checkPopinOpenedFR()
-                .nonexistentEmailFR();
+                .checkPopinOpenedFR(strings.getPopinTitleFR())
+                .nonexistentEmailFR(userInfo.getNonexistentEmail(),strings.getNonexistentEmailFR());
 
     }
       @Test
@@ -75,8 +77,8 @@ public class ErrorsTest extends BaseTest {
                 .openEN()
                 .openLoginPopinEN()
                 .getPopinEN()
-                .checkPopinOpenedEN()
-                .nonexistentEmailEN();
+                .checkPopinOpenedEN(strings.getPopinTitleEN())
+                .nonexistentEmailEN(userInfo.getNonexistentEmail(),strings.getNonexistentEmailEN());
 
     }
 }
