@@ -26,8 +26,7 @@ public class BaseTest {
 //        Selenide.clearBrowserLocalStorage();
 
     @BeforeMethod
-    public void logOff(){
+    public void logOff() {
         Selenide.clearBrowserCookies();
     }
-
-    }
+}
