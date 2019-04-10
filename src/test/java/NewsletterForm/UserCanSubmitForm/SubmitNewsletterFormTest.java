@@ -18,10 +18,10 @@ public class SubmitNewsletterFormTest extends BaseTest {
     Homepage homepage = new Homepage();
     UserInfo defaultUserInfo = new UserInfo();
 
-    @BeforeMethod
-    public void logOff(){
-        Selenide.clearBrowserCookies();
-    }
+//    @BeforeMethod
+//    public void logOff(){
+//        Selenide.clearBrowserCookies();
+//    }
 
     @Test
 

@@ -14,10 +14,10 @@ public class ErrorsTest extends BaseTest {
     UserInfo userInfo = new UserInfo();
 
 
-    @BeforeMethod
-    public void logOff(){
-        Selenide.clearBrowserCookies();
-        }
+//    @BeforeMethod
+//    public void logOff(){
+//        Selenide.clearBrowserCookies();
+//        }
 
 
     @Test
