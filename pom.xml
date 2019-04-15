@@ -9,9 +9,12 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <allure.version>2.10.0</allure.version>
-        <java.version>1.8</java.version>
-        <aspectj.version>1.9.2</aspectj.version>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<allure.version>2.10.0</allure.version>
+		<java.version>1.8</java.version>
+		<aspectj.version>1.9.2</aspectj.version>
     </properties>
 
     <dependencies>
@@ -34,31 +37,9 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>com.codeborne</groupId>
-            <artifactId>selenide</artifactId>
-            <version>5.1.0</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-simple</artifactId>
             <version>1.7.21</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>1.7.5</version>
-        </dependency>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-log4j12</artifactId>
-            <version>1.7.5</version>
-        </dependency>
-        <dependency>
-            <groupId>io.qameta.allure</groupId>
-            <artifactId>allure-testng</artifactId>
-            <version>${allure.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -71,16 +52,6 @@
             <artifactId>testng</artifactId>
             <version>6.14.3</version>
         </dependency>
-        <!--<dependency>-->
-            <!--<groupId>commons-io</groupId>-->
-            <!--<artifactId>commons-io</artifactId>-->
-            <!--<version>2.6</version>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-            <!--<groupId>commons-io</groupId>-->
-            <!--<artifactId>commons-io</artifactId>-->
-            <!--<version>2.6</version>-->
-        <!--</dependency>-->
         <dependency>
             <groupId>commons-collections</groupId>
             <artifactId>commons-collections</artifactId>
@@ -97,6 +68,17 @@
             <version>1.18.6</version>
             <scope>test</scope>
         </dependency>
+	    <dependency>
+		    <groupId>io.qameta.allure</groupId>
+		    <artifactId>allure-testng</artifactId>
+		    <version>${allure.version}</version>
+		    <scope>test</scope>
+	    </dependency>
+	    <dependency>
+		    <groupId>org.apache.metamodel</groupId>
+		    <artifactId>MetaModel-full</artifactId>
+		    <version>5.2.0</version>
+	    </dependency>
     </dependencies>
 
     <build>
@@ -106,6 +88,9 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M3</version>
                 <configuration>
+	                <suiteXmlFiles>
+		                <suiteXmlFile>src/test/java/RecoverPasswordForm/ElementsT/RecoverPasswordTest.xml</suiteXmlFile>
+	                </suiteXmlFiles>
                     <testFailureIgnore>true</testFailureIgnore>
                     <argLine>
                         -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
@@ -122,18 +107,18 @@
         </plugins>
     </build>
 
-    <reporting>
-        <excludeDefaults>true</excludeDefaults>
-        <plugins>
-            <plugin>
-                <groupId>io.qameta.allure</groupId>
-                <artifactId>allure-maven</artifactId>
-                <version>${allure.version}</version>
-                <configuration>
-                    <reportVersion>${allure.version}</reportVersion>
-                </configuration>
-            </plugin>
-        </plugins>
-    </reporting>
+<!--    <reporting>-->
+<!--        <excludeDefaults>true</excludeDefaults>-->
+<!--        <plugins>-->
+<!--            <plugin>-->
+<!--                <groupId>io.qameta.allure</groupId>-->
+<!--                <artifactId>allure-maven</artifactId>-->
+<!--                <version>${allure.version}</version>-->
+<!--                <configuration>-->
+<!--                    <reportVersion>${allure.version}</reportVersion>-->
+<!--                </configuration>-->
+<!--            </plugin>-->
+<!--        </plugins>-->
+<!--    </reporting>-->
 
 </project>
